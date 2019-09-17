@@ -12,7 +12,7 @@ COPY check.py ./
 RUN pip install runipy
 RUN pip install -r requirements.txt
 RUN pip install awscli
-RUN aws configure set region us-east-2
+RUN aws configure set region ${REGION}
 ENV BUCKET=${BUCKET}
 
 EXPOSE 8888
