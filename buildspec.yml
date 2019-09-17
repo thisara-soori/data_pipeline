@@ -10,7 +10,7 @@ phases:
   build:
     commands:
       - ls -la .
-      - docker build --tag=$ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPO_NAME:latest .
+      - docker build --tag=$ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPO_NAME:latest --build-arg BUCKET=$BUCKET --build-arg REGION=$AWS_REGION .
       - docker images
 #      - docker tag thisara-test-repo2:latest 584643220196.dkr.ecr.us-east-2.amazonaws.com/thisara-test-repo2:latest
 #     - docker build --tag=584643220196.dkr.ecr.us-east-2.amazonaws.com/thisara-test-backend:V1.0 .
