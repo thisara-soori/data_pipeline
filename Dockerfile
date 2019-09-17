@@ -3,6 +3,7 @@ FROM $BASE_CONTAINER
 MAINTAINER thisarasooriyarachchi@gmail.com
 
 ARG BUCKET
+ARG REGION
 WORKDIR /work
 
 COPY requirements.txt ./
