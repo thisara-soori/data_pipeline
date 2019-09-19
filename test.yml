@@ -6,6 +6,7 @@ phases:
   pre_build:
     commands:
       - pip install boto3
+      - pip install click
   build:
     commands:
       - python check.py -d $DATE -b $BUCKET
