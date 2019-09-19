@@ -9,7 +9,6 @@ WORKDIR /work
 COPY requirements.txt ./
 COPY query.sql ./
 COPY usp.ipynb ./
-COPY check.py ./
 RUN pip install runipy
 RUN pip install -r requirements.txt
 RUN pip install awscli
