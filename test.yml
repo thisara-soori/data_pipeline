@@ -7,5 +7,5 @@ phases:
     commands:
       - pip install boto3
   build:
-    commands
+    commands:
       - python check.py -d $DATE -b $BUCKET
