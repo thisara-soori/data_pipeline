@@ -25,6 +25,6 @@ def lambda_handler(event, context):
         arn = response["tasks"][0]['taskArn']
         waiter = client.get_waiter('tasks_stopped')
         waiter.wait(cluster='thisara-test-cluster', tasks=[arn],WaiterConfig={'Delay': 60})
-        exit(0)
+        #exit(0)
     except:
          exit(1)
