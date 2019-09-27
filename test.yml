@@ -7,7 +7,10 @@ phases:
     commands:
       - pip install boto3
       - pip install click
-      - great_expectations
+      - pip install great_expectations
+      - pip install pyarrow
+      - pip install s3fs
+      
   build:
     commands:
       - python check.py -d $DATE -b $BUCKET
