@@ -8,6 +8,7 @@ SUBNET1 = os.environ['SUBNET1']
 SUBNET2 = os.environ['SUBNET2']
 
 def lambda_handler(event, context):
+    print (TASK_DEF)
     client = boto3.client('ecs')
     try:
         response = client.run_task(
