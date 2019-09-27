@@ -7,7 +7,7 @@ TASK_DEF = os.environ['TASK_DEF']
 SUBNET1 = os.environ['SUBNET1']
 SUBNET2 = os.environ['SUBNET2']
 
-def lambda_handler(event, context):
+def main():
     print (TASK_DEF)
     client = boto3.client('ecs')
     try:
@@ -29,3 +29,5 @@ def lambda_handler(event, context):
         #exit(0)
     except:
          exit(1)
+
+main()
