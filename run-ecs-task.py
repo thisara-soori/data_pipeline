@@ -27,7 +27,8 @@ def main():
         waiter = client.get_waiter('tasks_stopped')
         waiter.wait(cluster=CLUSTER, tasks=[arn],WaiterConfig={'Delay': 60})
         exit(0)
-    except:
-         exit(1)
+    except Exception as e:
+        print (e)
+        exit(1)
 
 main()
