@@ -13,4 +13,5 @@ phases:
       
   build:
     commands:
+      - whoami
       - python check.py -d $DATE -b $BUCKET
